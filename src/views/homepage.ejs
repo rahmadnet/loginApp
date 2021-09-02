@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- load font awesome 5-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- load jquery, Slick slider -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/slick-slide.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<style>
+  
+
+    .for-users {
+        border-radius: 3px;
+        position: absolute;
+        border: 1px solid #d8d8d8;
+        background-color: #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        top: 60px;
+        padding: 5px;
+        display: none;
+    }
+</style>
+<script>
+    $(document).mouseup(function(e) 
+{   
+    var container = $(".for-users");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        container.hide();
+    }
+});
+
+$(document).ready(function(e){
+    $("#logoIcon").on("click", function(e){
+        $(".for-users").css("display", "flex");
+        $(".for-users").addClass("display", "flex");
+});
+})
+
+
+</script>
+
+<body>
+    <div class="container">
+        <section class="header">
+            <div class="top-nav">
+                <div class="logo">
+                    <i class="fas fa-bars" id="logoIcon"></i>
+                    <img src="img/logo-website.png" alt="logo-website">
+                    <div class="for-users">
+                        <a href="/login">Login</a>
+                        <a href="/users">Admin Page</a>
+                    </div>
+                </div>
+                <div class="intro">
+                    <div class="intro-icon">
+                        <h3 class="title">Specialist</h3>
+                        <span>Find a doctor by specialty</span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">Healt Facilities</h3>
+                        <span>Select clinic</span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">Doctor</h3>
+                        <span>Choose a doctor</span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">Exam packege</h3>
+                        <span>General health check</span>
+                    </div>
+                </div>
+                <div class="support">
+                    <span><i class="fas fa-question-circle"></i>Support</span>
+                </div>
+            </div>
+            <div class="image-nav">
+                <div class="title-image">
+                    SPECIALIST MEDICAL EXAMINATION PLATFORM
+                </div>
+                <div class="btn-search">
+                    <i class="fas fa-search"></i>
+                    <input class="input-search" type="text" name="btnSearch" placeholder="Search here...">
+                </div>
+            </div>
+            <div class="bottom-nav">
+                <div class="bottom-item">
+                    <i class="fas fa-check"></i>
+                    <span>Big hospital</span>
+                </div>
+                <div class="bottom-item">
+                    <i class="far fa-thumbs-up"></i>
+                    <span>Good clinic</span>
+                </div>
+                <div class="bottom-item">
+                    <i class="fas fa-user-nurse"></i>
+                    <span>Good doctor</span>
+                </div>
+                <div class="bottom-item">
+                    <i class="far fa-clock"></i>
+                    <span>Priority examination</span>
+                </div>
+            </div>
+        </section>
+        <section class="popular-specialty">
+            <div class="title-section">
+                <span class="span-title">Popular specialty</span>
+                <div class="btn-view">
+                    <a class="red" href="/"> <span>ALL SPECIALTY</span></a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="my-slick-slide">
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>Heart</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>Nerve</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>Digest</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>Traditoanal medicine</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>Acupunture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hospital-and-clinic">
+            <div class="title-section">
+                <span class="span-title">Top hospital & clinics</span>
+                <div class="btn-view">
+                    <a class="red" href="/"> <span>ALL MEDICAL FACILITIES </span></a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="my-slick-slide">
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>K Hospital</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>D Hospital</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>ABC Clinic</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>ABC Hospital</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <div class="image-slide">
+                        </div>
+                        <div class="div-title">
+                            <span>d Hospital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="doctors">
+            <div class="title-section">
+                <span class="span-title">Outstanding doctor</span>
+                <div class="btn-view">
+                    <a class="red" href="/"> <span>ALL THE DOCTORS</span></a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="my-slick-slide">
+                    <div class="div-slide">
+                        <img src="../img/7.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Rahmad Nasution</span>
+                            <span class="speciality">Beckend</span>
+                        </div>
+                        <span class="count-booking">1.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../img/7.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Rahmad Nasution</span>
+                            <span class="speciality">Beckend</span>
+                        </div>
+                        <span class="count-booking">2.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../img/7.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Rahmad Nasution</span>
+                            <span class="speciality">Beckend</span>
+                        </div>
+                        <span class="count-booking">3.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../img/7.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Rahmad Nasution</span>
+                            <span class="speciality">Beckend</span>
+                        </div>
+                        <span class="count-booking">4.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../img/7.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Rahmad Nasution</span>
+                            <span class="speciality">Beckend</span>
+                        </div>
+                        <span class="count-booking">5.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../img/7.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Rahmad Nasution</span>
+                            <span class="speciality">Beckend</span>
+                        </div>
+                        <span class="count-booking">6.000 bookings</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="handbook">
+            <div class="title-section">
+                <span class="span-title">Handbooks</span>
+                <div class="btn-view">
+                    <a class="red" href="/"> <span>ALL POSTS </span></a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="handbook-slide">
+                    <div class="div-slide">
+                        <img src="../img/5.jpg" alt="image the post">
+                        <div class="info-post">
+                            <span class="title-post">My first post</span>
+                            <div class="summary-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                        </div>
+                    </div>     
+                    <div class="div-slide">
+                        <img src="../img/5.jpg" alt="image the post">
+                        <div class="info-post">
+                            <span class="title-post">My first post</span>
+                            <div class="summary-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                        </div>
+                    </div>  
+                    <div class="div-slide">
+                        <img src="../img/5.jpg" alt="image the post">
+                        <div class="info-post">
+                            <span class="title-post">My first post</span>
+                            <div class="summary-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="left-side">
+                <span class="title">For doctors</span>
+                <span class="second-title">Buildingcredibility and online brand</span>
+                <span class="third-title">Increasing the number of patients and effective management</span>
+                <a class="btn-contact">
+                    <span>contact for cooperation</span>
+                </a>
+            </div>
+            <div class="right-side auto-resizable-iframe">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/ASljkuYwHkc?list=PLNOjHC_BXrfBvYQVOfgUcKmWHK25SsPc6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <span>Rahmad Net</span>
+        </footer>
+    </div>
+</body>
+
+</html>

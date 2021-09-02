@@ -1,0 +1,50 @@
+.container{
+    max-width: 600px;
+    margin: 30px auto;
+}
+fieldset{
+    border-radius: 5px;
+}
+legend{
+    font-size: 25px;
+    font-weight: 600;
+}
+.group-input{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.group-input input{
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+
+.btn-register, .btn-login{
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.flash-message{
+    max-width: 600px;
+    margin: 15px auto 0 auto;
+}
+
+.alert-danger{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    border-color: #f5c6cb;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.forgot-password{
+    margin-bottom: 10px;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+

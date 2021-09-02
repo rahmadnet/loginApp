@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/auth.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="flash-message">
+        <% if(errors !== "") {%>
+            <% errors.forEach((item) => {%>
+                <div class="alert-danger">
+                    <%- item%>
+                </div>
+            <%})%>
+        <%}%>
+    </div>
+    <div>
+        <form action="/register" method="POST">
+            <div class="container">
+                <fieldset>
+                    <legend>Create a new account</legend>
+                    <div class="group-input">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" value="<%= form.firstName %>">
+                    </div>
+                    <div class="group-input">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" value="<%= form.lastName %>">
+                    </div>
+                    <div class="group-input">
+                        <label for="email">Email address (<span style="color: red;">*</span>)</label>
+                        <input type="email" name="email" id="email" value="<%= form.email %>" required>
+                    </div>
+                    <div class="group-input">
+                        <label for="password">Password (<span style="color: red;">*</span>)</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="group-input">
+                        <label for="comfirmPassword">Comfirm Password (<span style="color: red;">*</span>)</label>
+                        <input type="password" name="comfirmPassword" id="comfirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn-register">Submit</button>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
